@@ -8,17 +8,8 @@
     background-color: #bbe4e9;
 }
 
-.noteLength {    
+.noteLength {
     color: #222831;
-}
-
-p {
-    color: #222831;
-}
-
-.text {
-    color: #222831;
-    white-space: pre-wrap;
 }
 
 .deleteBtn {
