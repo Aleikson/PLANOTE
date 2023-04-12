@@ -1,5 +1,12 @@
+.noteContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin: 20px;
+}
+
 .note {
-    position: absolute;
+    position: relative;
     top: 100px;
     left: 300px;
     word-wrap: break-word;
@@ -8,7 +15,7 @@
     background-color: #bbe4e9;
 }
 
-.noteLength {
+.text {
     color: #222831;
 }
 
