@@ -44,12 +44,17 @@ export const Global = () => {
   };
 
   return (
-    <div className={styles.container} onDragOver={(e) => e.preventDefault()}>
+      <>
       <h1 className={styles.tittle}>ScheduleMe</h1>
+    <div className={styles.container}>
       <div className={styles.form}>
-        <DeleteNote notes={notesState.notes} deleteNote={deleteNote} />
         <AddNote addNote={addNote} />
+        <div className={styles.anotherThing}>I Will Put Another THing Here</div>
+      </div>
+      <div className={styles.noteGrid}>
+        <DeleteNote notes={notesState.notes} deleteNote={deleteNote} />
       </div>
     </div>
+    </>
   );
 }

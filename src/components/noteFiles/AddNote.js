@@ -23,13 +23,15 @@ export const AddNote = ({ addNote }) => {
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
-      <textarea maxLength={100}
-        placeholder="Add Note"
-        value={noteText}
-        onChange={(e) => setNoteText(e.target.value)}
-      ></textarea>
-      <button>Add</button>
-    </form>
+    <div className={styles.container}>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <textarea maxLength={100}
+          placeholder="Add Note"
+          value={noteText}
+          onChange={(e) => setNoteText(e.target.value)}
+        ></textarea>
+        <button>Add</button>
+      </form>
+    </div>
   );
 }
