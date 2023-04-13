@@ -2,22 +2,23 @@ import { useState } from 'react';
 import styleToObject from 'style-to-object';
 
 export const PaletteColor = ({ onChange }) => {
-    const [bgColor, setBgColor] = useState();
-  
-    function handleColorChange(color) {
-      setBgColor(color);
-      onChange(color);
-    }
-  
-    const allowedColorsStyle = styleToObject(`
-      bottom: 225px;      
+  const [, setBgColor] = useState();
+
+  function handleColorChange(color) {
+    setBgColor(color);
+    onChange(color);
+  }
+
+  const allowedColorsStyle = styleToObject(`
+      width: 100%;
+      bottom: 155px;      
       position: absolute;
       display: flex;
       alignItems: center;
     `);
-  
-    const optionStyle = (color) =>
-      styleToObject(`
+
+  const optionStyle = (color) =>
+    styleToObject(`
       backgroundColor: ${color};
       width: 24px;
       height: 24px;
@@ -26,14 +27,16 @@ export const PaletteColor = ({ onChange }) => {
       border: none;
       cursor: pointer;
     `);
-  
-    return (
-      <div>
-        <div  style={allowedColorsStyle}>
-          <button style={optionStyle('#ff0000')} onClick={() => handleColorChange('#ff0000')} />
-          <button style={optionStyle('#00ff00')} onClick={() => handleColorChange('#00ff00')} />
-          <button style={optionStyle('#0000ff')} onClick={() => handleColorChange('#0000ff')} />
-        </div>
+
+  return (
+    <div>
+      <div style={allowedColorsStyle}>
+        <button style={optionStyle('#fcff82')} onClick={() => handleColorChange('#fcff82')} />
+        <button style={optionStyle('#8ed2c9')} onClick={() => handleColorChange('#8ed2c9')} />
+        <button style={optionStyle('#d55b3e')} onClick={() => handleColorChange('#d55b3e')} />
+        <button style={optionStyle('#f4aeba')} onClick={() => handleColorChange('#f4aeba')} />
+        <button style={optionStyle('#97cba9')} onClick={() => handleColorChange('#97cba9')} />
       </div>
-    );
-  };
+    </div>
+  );
+};
