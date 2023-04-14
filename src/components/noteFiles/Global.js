@@ -45,14 +45,14 @@ export const Global = () => {
 
   return (
       <>
-      <h1 className={styles.tittle}>ScheduleMe</h1>
+      <h2 className={styles.tittle}>ScheduleMe</h2>
     <div className={styles.container}>
+      <div className={styles.noteGrid}>
+        <DeleteNote notes={notesState.notes} deleteNote={deleteNote} />
+      </div>
       <div className={styles.form}>
         <AddNote addNote={addNote} />
         <div className={styles.anotherThing}>I Will Put Another THing Here</div>
-      </div>
-      <div className={styles.noteGrid}>
-        <DeleteNote notes={notesState.notes} deleteNote={deleteNote} />
       </div>
     </div>
     </>
