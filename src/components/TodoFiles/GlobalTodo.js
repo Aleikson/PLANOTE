@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AiOutlinePlus } from 'react-icons/ai';
 import Todo from '../TodoFiles/Todo';
+import styles from "./GlobalTodo.module.css"
 import { db } from '../../firebase';
 import {
   query,
@@ -53,15 +54,16 @@ export const GlobalTodo = () => {
 
   return (
     <div>
-      <div>
-        <form onSubmit={createTodo}>
+      <div className={styles.container}>        
+        <form onSubmit={createTodo} className={styles.form}>
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
+            className={styles.input}
             type='text'
             placeholder='Add Todo'
           />
-          <button>
+          <button className={styles.button}>
             <AiOutlinePlus size={30} />
           </button>
         </form>
@@ -76,7 +78,7 @@ export const GlobalTodo = () => {
           ))}
         </ul>
         {todos.length < 1 ? null : (
-          <p>{`You have ${todos.length} todos`}</p>
+          <p className={styles.count}>{`You have ${todos.length} todos`}</p>
         )}
       </div>
     </div>
