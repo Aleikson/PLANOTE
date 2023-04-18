@@ -1,0 +1,36 @@
+.li {
+    display: flex;
+    justify-content: space-between;   
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    text-transform: capitalize;
+}
+
+.liComplete {
+    display: flex;
+    justify-content: space-between;    
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    text-transform: capitalize;
+}
+
+.row {
+    display: flex;
+}
+
+.text {
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.textComplete {
+    margin-left: 0.5rem;
+    cursor: pointer;
+    text-decoration: line-through;
+}
+
+.button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}

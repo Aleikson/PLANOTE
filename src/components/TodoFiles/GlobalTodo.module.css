@@ -1,0 +1,30 @@
+.container {
+    background-color: slategray; 
+    max-width: 50%;
+    width: 100%;
+    margin: auto;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input {
+    border: 1px solid #ccc;
+    padding: 0.5rem;   
+    font-size: 1.5rem;
+}
+
+.button {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-left: 0.5rem;
+    background-color: #53a8b6;
+    color: #f8f8ff;
+}
+
+.count {
+    text-align: center;
+    padding: 0.5rem;
+}
