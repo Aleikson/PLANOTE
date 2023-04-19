@@ -1,8 +1,12 @@
 .container {
-    background-color: slategray; 
+    background: red;     
     max-width: 50%;
     width: 100%;
     margin: auto;
+}
+
+.list{
+    background: green;
 }
 
 .form {

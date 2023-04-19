@@ -1,4 +1,4 @@
-.li {
+li {
     display: flex;
     justify-content: space-between;   
     padding: 0.5rem;
@@ -7,6 +7,7 @@
 }
 
 .liComplete {
+    background: yellow;
     display: flex;
     justify-content: space-between;    
     padding: 0.5rem;
@@ -29,7 +30,7 @@
     text-decoration: line-through;
 }
 
-.button {
+.btn {
     cursor: pointer;
     display: flex;
     align-items: center;
