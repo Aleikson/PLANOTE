@@ -53,8 +53,8 @@ export const GlobalTodo = () => {
   };
 
   return (
-    <div>
-      <div className={styles.container}>        
+    <>
+      <div className={styles.container}>
         <form onSubmit={createTodo} className={styles.form}>
           <input
             value={input}
@@ -67,6 +67,8 @@ export const GlobalTodo = () => {
             <AiOutlinePlus size={30} />
           </button>
         </form>
+      </div>
+      <div className={styles.list}>
         <ul>
           {todos.map((todo, index) => (
             <Todo
@@ -77,10 +79,7 @@ export const GlobalTodo = () => {
             />
           ))}
         </ul>
-        {todos.length < 1 ? null : (
-          <p className={styles.count}>{`You have ${todos.length} todos`}</p>
-        )}
       </div>
-    </div>
+    </>
   );
 }
