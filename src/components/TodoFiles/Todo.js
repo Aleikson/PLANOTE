@@ -1,14 +1,14 @@
 import React from 'react';
 import { FaRegTrashAlt } from 'react-icons/fa';
-import './Todo.module.css';
+import styles from './Todo.module.css';
 
 const Todo = ({ todo, toggleComplete, deleteTodo }) => {
-  const liComplete = todo.completed ? 'liComplete' : 'li';
-  const textComplete = todo.completed ? 'textComplete' : 'text';
+  const liComplete = todo.completed ? `${styles.li} ${styles.liComplete}` : styles.li;
+  const textComplete = todo.completed ? `${styles.text} ${styles.textComplete}` : styles.text;
 
   return (
     <li className={liComplete}>
-      <div className='row'>
+      <div className={styles.row}>
         <input
           onChange={() => toggleComplete(todo)}
           type='checkbox'
@@ -18,7 +18,7 @@ const Todo = ({ todo, toggleComplete, deleteTodo }) => {
           {todo.text}
         </p>
       </div>
-      <button onClick={() => deleteTodo(todo.id)}>
+      <button className={styles.btn} onClick={() => deleteTodo(todo.id)}>
         {<FaRegTrashAlt />}
       </button>
     </li>
