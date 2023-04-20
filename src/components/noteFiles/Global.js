@@ -44,8 +44,7 @@ export const Global = () => {
   };
 
   return (
-    <>
-      <h2 className={styles.tittle}>ScheduleMe</h2>
+    <>      
       <AddNote addNote={addNote} />
       <DeleteNote notes={notesState.notes} deleteNote={deleteNote} />
     </>
