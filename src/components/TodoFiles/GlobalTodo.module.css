@@ -1,6 +1,5 @@
 .container {
     width: 100%;
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,21 +22,23 @@
     justify-content: center;
     align-items: center;
     margin: 15px;
+    width: 90%;
 }
 
 .input {
-    height: 45px;
-    width: 70%;
+    height: 60px;
+    width: 100%;
+    margin: 15px;
     border: none;
-    border-bottom: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #F5F5F5;
     outline: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    color: #333;
+    resize: none;
     padding: 10px;
     box-sizing: border-box;
-    background-color: #f7f7f7;
-    transition: all 0.3s ease;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .input:focus {
