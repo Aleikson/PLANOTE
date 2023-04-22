@@ -1,7 +1,4 @@
-import React, { useReducer } from 'react';
-import { DeleteNote } from "./DeleteNote"
-import { AddNote } from './AddNote';
-import styles from "../noteFiles/Global.module.css"
+import { useReducer } from 'react';
 
 export const Global = () => {
   const initialState = {
@@ -43,10 +40,9 @@ export const Global = () => {
     dispatch({ type: 'DELETE_NOTE', payload: id });
   };
 
-  return (
-    <>      
-      <AddNote addNote={addNote} />
-      <DeleteNote notes={notesState.notes} deleteNote={deleteNote} />
-    </>
-  );
-}
+  return {
+    addNote,
+    deleteNote,
+    notesState,
+  };
+};
