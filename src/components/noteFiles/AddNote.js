@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import styles from "../noteFiles/AddNote.module.css"
+import { AiOutlinePlus } from 'react-icons/ai';
 
 export const AddNote = ({ addNote }) => {
   const [noteText, setNoteText] = useState('');
@@ -25,12 +26,14 @@ export const AddNote = ({ addNote }) => {
   return (
     <div className={styles.container}>
       <form className={styles.form} onSubmit={handleSubmit}>
-        <textarea maxLength={125}
+        <input maxLength={125}
           placeholder="Add Note"
           value={noteText}
           onChange={(e) => setNoteText(e.target.value)}
-        ></textarea>
-        <button>Add</button>
+        ></input>
+        <button className={styles.button}>
+            <AiOutlinePlus size={30} />
+          </button>
       </form>
     </div>
   );
