@@ -1,23 +1,20 @@
 .container {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  display: flex;  
   align-items: center;
   flex-direction: column;
 }
 
 .form {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 15px;
-  width: 90%;
+  flex-direction: column;
 }
 
-.form input {
-  height: 60px;
+.form textarea {
+  height: 130px;
   width: 100%;
-  margin: 15px;
+  margin: 10px;
   border: none;
   border-radius: 5px;
   background-color: #F5F5F5;
@@ -31,8 +28,8 @@
 }
 
 .button {
+  width: 50%;
   border: none;
-  padding: 10px 20px;
   border-radius: 5px;
   background-color: #53a8b6;
   color: #fff;

@@ -6,12 +6,15 @@
 .right {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 80%;
 }
 
 .inputs{
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  border: 2px solid black;
+  margin: 3px;
 }
 
 .left {
@@ -22,6 +25,7 @@
 
 .box {
   flex: 1;
-  margin: 10px;
+  margin: 3px;
   background-color: #ccc;
+  border: 2px solid black;
 }
