@@ -25,12 +25,13 @@ export const AddNote = ({ addNote }) => {
 
   return (
     <div className={styles.container}>
+      <h2>Add Notes</h2>
       <form className={styles.form} onSubmit={handleSubmit}>
-        <input maxLength={125}
+        <textarea maxLength={125}
           placeholder="Add Note"
           value={noteText}
           onChange={(e) => setNoteText(e.target.value)}
-        ></input>
+        ></textarea>
         <button className={styles.button}>
             <AiOutlinePlus size={30} />
           </button>

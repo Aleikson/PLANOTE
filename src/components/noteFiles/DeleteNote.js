@@ -3,7 +3,7 @@ import styles from "../noteFiles/DeleteNote.module.css"
 import { PaletteColor } from './PaletteColor';
 
 export const DeleteNote = ({ notes = [], deleteNote }) => {
-  const limitedNotes = notes.slice(0, 12);
+  const limitedNotes = notes.slice(0, 5);
   const [selectedNoteId, setSelectedNoteId] = useState(null);
 
   const handleNoteClick = (noteId) => {

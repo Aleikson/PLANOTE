@@ -11,7 +11,7 @@ export const PaletteColor = ({ onChange }) => {
 
   const allowedColorsStyle = styleToObject(`
       width: 100%;
-      bottom: 155px;      
+      top: 175px;      
       position: absolute;
       display: flex;
       alignItems: center;

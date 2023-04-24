@@ -5,6 +5,7 @@ import { AiOutlinePlus } from 'react-icons/ai';
 export const AddTodo = ({ createTodo, input, setInput }) => {
   return (
     <div className={styles.container}>
+      <h2>Add Todo</h2>
       <form onSubmit={createTodo} className={styles.form}>
         <input
           value={input}
