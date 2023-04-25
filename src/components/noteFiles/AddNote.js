@@ -33,8 +33,8 @@ export const AddNote = ({ addNote }) => {
           onChange={(e) => setNoteText(e.target.value)}
         ></textarea>
         <button className={styles.button}>
-            <AiOutlinePlus size={30} />
-          </button>
+          <AiOutlinePlus size={30} />
+        </button>
       </form>
     </div>
   );

@@ -7,10 +7,9 @@ export const AddTodo = ({ createTodo, input, setInput }) => {
     <div className={styles.container}>
       <h2>Add Todo</h2>
       <form onSubmit={createTodo} className={styles.form}>
-        <input
+        <textarea
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          className={styles.input}
           type='text'
           placeholder='Add Todo'
         />
