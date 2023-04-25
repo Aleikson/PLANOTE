@@ -2,10 +2,11 @@ import React from 'react';
 import './App.css';
 import { Global } from "./components/noteFiles/Global"
 import { AddNote } from './components/noteFiles/AddNote';
-import { DeleteNote } from './components/noteFiles/DeleteNote';
+import { Notes } from './components/noteFiles/Notes';
 import { GlobalTodo } from './components/TodoFiles/GlobalTodo';
 import { AddTodo } from './components/TodoFiles/AddTodo'
 import { TodoList } from './components/TodoFiles/TodoList'
+import { TextBox } from './components/TextBox';
 
 function App() {
   const { addNote, deleteNote, notesState } = Global();
@@ -18,10 +19,12 @@ function App() {
           <AddNote addNote={addNote} />
           <AddTodo createTodo={createTodo} input={input} setInput={setInput} />
         </div>
-        <div className="box">BOX</div>
+        <div className="box">
+          <TextBox />
+        </div>
       </div>
       <div className="right">
-        <DeleteNote notes={notesState.notes} deleteNote={deleteNote} />
+        <Notes notes={notesState.notes} deleteNote={deleteNote} />
         <TodoList todos={todos} toggleComplete={toggleComplete} deleteTodo={deleteTodo} />
       </div>
     </div>
