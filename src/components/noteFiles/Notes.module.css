@@ -1,8 +1,9 @@
 .noteContainer {
-    height: 25%;
-    margin: 3px;
+    height: 30%;
     display: flex;
-    border: 2px solid black;
+    justify-content: center;
+    background: #79c2d0;
+    margin: 3px 3px 0px 3px;
 }
 
 .note {
@@ -11,6 +12,7 @@
     width: 100%;
     margin: 5px;
     max-width: 150px;
+    cursor: pointer;
 }
 
 .text {

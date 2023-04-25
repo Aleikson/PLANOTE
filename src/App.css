@@ -1,20 +1,20 @@
 .App {
   display: flex;
   height: 100vh;
+  background-color: #fafafa;
 }
 
 .right {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
 }
 
 .inputs{
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  border: 2px solid black;
-  margin: 3px;
+  margin: 3px 0px 3px 3px;
+  background: #5585b5;
 }
 
 .left {
@@ -24,8 +24,10 @@
 }
 
 .box {
+  display: flex;
   flex: 1;
-  margin: 3px;
-  background-color: #ccc;
-  border: 2px solid black;
+  justify-content: center;
+  margin: 3px 0px 3px 3px;
+  background: #53a8b6;
+  align-items: center;
 }
