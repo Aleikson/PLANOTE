@@ -15,17 +15,20 @@ export const GlobalTodo = () => {
   const [input, setInput] = useState('');
 
   const createTodo = async (e) => {
-    e.preventDefault(e);
+    e?.preventDefault();
+    
     if (input === '') {
       alert('Please enter a valid todo');
       return;
     }
+  
     await addDoc(collection(db, 'todos'), {
       text: input,
       completed: false,
     });
+  
     setInput('');
-  };
+  };;
 
   useEffect(() => {
     const q = query(collection(db, 'todos'));
