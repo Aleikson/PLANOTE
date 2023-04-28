@@ -35,9 +35,10 @@ const styles = {
 
     quote: {
         textAlign: 'center',
-        fontSize: '24px',
-        fontWeight: 'bold'
-    }
+        fontSize: '22px',
+        fontFamily: 'Edu NSW ACT Foundation, Oswald, sans-serif',
+        color: 'white',
+}
 }
 
 export const TextBox = () => {
