@@ -5,7 +5,7 @@ li {
     width: 90%;
     padding: 5px;
     margin: 0.5rem 0px;
-    background-color: #f7f7f7;
+    background-color: #5c5470;
     border-radius: 0.5rem;
     box-shadow: 0 1px rgba(0, 0, 0, 0.2);
     font-family: "Open Sans", sans-serif;
@@ -31,7 +31,7 @@ li {
 }
 
 .text:hover {
-    color: #53a8b6;
+    color: white;
 }
 
 .btn {
@@ -43,14 +43,13 @@ li {
     height: 2rem;
     margin-left: 0.5rem;
     border-radius: 50%;
-    background-color: #53a8b6;
-    color: #fff;
+    background-color: #dbd8e3;
     font-size: 1.2rem;
     transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #bbe4e9;
-    color: #222831;
+    background-color: #2a2438;
+    color: white;
     transform: translateY(-2px);
 }

@@ -10,11 +10,12 @@
   width: 100%;
 }
 
-.inputs{
+.inputs {
   display: flex;
   flex-direction: column;
   margin: 3px 0px 3px 3px;
-  background: #5585b5;
+  background: #2a2438;
+  width: 230px;
 }
 
 .left {
@@ -28,6 +29,18 @@
   flex: 1;
   justify-content: center;
   margin: 3px 0px 3px 3px;
-  background: #53a8b6;
+  background: #352f44;
   align-items: center;
+}
+
+.boxText {
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+  margin: 8px;
+  background: #352f44;
+  align-items: center;
+  max-height: 40%;
+  position: relative;
+  top: 25%;
 }
