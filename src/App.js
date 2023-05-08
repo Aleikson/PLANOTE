@@ -15,14 +15,11 @@ function App() {
   return (
     <div className="App">
       <div className="left">
-        <div className="inputs">
-          <AddNote addNote={addNote} />
-          <AddTodo createTodo={createTodo} input={input} setInput={setInput} />
-          <div className="boxText">
-            <TextBox />
-          </div>
+        <AddNote addNote={addNote} />
+        <AddTodo createTodo={createTodo} input={input} setInput={setInput} />
+        <div className="boxText">
+          <TextBox />
         </div>
-        <div className="box"></div>
       </div>
       <div className="right">
         <Notes notes={notesState.notes} deleteNote={deleteNote} />

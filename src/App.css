@@ -10,27 +10,12 @@
   width: 100%;
 }
 
-.inputs {
+.left {
   display: flex;
   flex-direction: column;
   margin: 3px 0px 3px 3px;
   background: #2a2438;
-  width: 230px;
-}
-
-.left {
-  display: flex;
-  flex-direction: row;
   width: 50%;
-}
-
-.box {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  margin: 3px 0px 3px 3px;
-  background: #352f44;
-  align-items: center;
 }
 
 .boxText {
