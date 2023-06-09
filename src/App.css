@@ -1,31 +1,22 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: lightblue;
+}
+
 .App {
   display: flex;
-  height: 100vh;
-  background-color: #fafafa;
+  flex-direction: column;
+  height: 100%;
 }
 
-.right {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.left {
-  display: flex;
-  flex-direction: column;
-  margin: 3px 0px 3px 3px;
-  background: #2a2438;
-  width: 50%;
+.containerNote,
+.containerTodo {
+  flex: 1;
 }
 
 .boxText {
-  display: flex;
-  flex: 1 1;
-  justify-content: center;
-  margin: 8px;
-  background: #352f44;
-  align-items: center;
-  max-height: 40%;
-  position: relative;
-  top: 25%;
+  height: 50%;
 }
