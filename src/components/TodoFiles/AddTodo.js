@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import styles from "./GlobalTodo.module.css";
+import styles from "./AddTodo.module.css";
 import { AiOutlinePlus } from 'react-icons/ai';
 
 Modal.setAppElement('#root');

@@ -1,5 +1,5 @@
 import Todo from './Todo';
-import styles from "./GlobalTodo.module.css"
+import styles from "./TodoList.module.css"
 
 export const TodoList = ({ todos, toggleComplete, deleteTodo }) => {
     return (
