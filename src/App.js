@@ -4,16 +4,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Global } from "./components/noteFiles/Global"
 import { AddNote } from './components/noteFiles/AddNote';
 import { Notes } from './components/noteFiles/Notes';
-import { GlobalTodo } from './components/TodoFiles/GlobalTodo';
-import { AddTodo } from './components/TodoFiles/AddTodo'
-import { TodoList } from './components/TodoFiles/TodoList'
+import  GlobalTodo  from './components/TodoFiles/GlobalTodo';
 import { TextBox } from './components/TextBox';
 import NavBar from './components/navbar/NavBar';
 
 function App() {
   const { addNote, deleteNote, notesState } = Global();
-  const { createTodo, input, setInput, todos, toggleComplete, deleteTodo } = GlobalTodo();
-
+ 
   return (
     <div className="App">
       <Router>
@@ -24,10 +21,8 @@ function App() {
             <Notes notes={notesState.notes} deleteNote={deleteNote} />
             <TextBox />
           </div>} />
-
           <Route path="todo" element={<div className='containerTodo'>
-            <AddTodo createTodo={createTodo} input={input} setInput={setInput} />
-            <TodoList todos={todos} toggleComplete={toggleComplete} deleteTodo={deleteTodo} />
+            <GlobalTodo />
           </div>} />
         </Routes>
       </Router>
