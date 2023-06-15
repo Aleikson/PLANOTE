@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import styles from "../noteFiles/Notes.module.css"
 import { PaletteColor } from './PaletteColor';
+import { AiOutlineCloseSquare } from 'react-icons/ai';
 
 export const Notes = ({ notes = [], deleteNote }) => {
-  const limitedNotes = notes.slice(0, 5);
+  const limitedNotes = notes.slice(0, 6);
   const [selectedNoteId, setSelectedNoteId] = useState(null);
   const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
 
@@ -59,12 +60,13 @@ const Note = ({ note, isSelected, handleNoteClick, setShowDeleteConfirmation }) 
         gridColumn: note.col,
         gridRow: note.row,
         backgroundColor: noteBgColor,
+        boxShadow: "5px 7px 6px rgba(0, 0, 0, 0.2)",
       }}
       onClick={() => handleNoteClick(note.id)}
     >
       <h2 className={styles.text}>{note.text}</h2>
       <button className={styles.deleteBtn} onClick={handleDeleteNote}>
-        X
+        <AiOutlineCloseSquare />
       </button>
       {isSelected && <PaletteColor onChange={handleNoteColorChange} />}
     </div>

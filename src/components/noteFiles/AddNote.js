@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import styles from "../noteFiles/AddNote.module.css"
-import { AiOutlinePlus } from 'react-icons/ai';
+import { GrAddCircle } from 'react-icons/gr';
 import Modal from 'react-modal';
 
 Modal.setAppElement('#root');
@@ -30,11 +30,9 @@ export const AddNote = ({ addNote }) => {
 
   return (
     <div className={styles.container}>
-      <h2>Notes</h2>
       <button onClick={() => setModalOpen(true)}>
-        <AiOutlinePlus size={30} />
+        <GrAddCircle size={30} />
       </button>
-
       <Modal
         isOpen={modalOpen}
         onRequestClose={() => setModalOpen(false)}
