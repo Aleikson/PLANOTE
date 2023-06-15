@@ -37,26 +37,43 @@ const styles = {
         textAlign: 'center',
         fontSize: '22px',
         fontFamily: 'Edu NSW ACT Foundation, Oswald, sans-serif',
-        color: 'white',
-}
+        color: '#222831',
+    },
+    container: {
+        display: 'flex',
+        justifyContent: 'center',
+        width: '80%'
+    }
 }
 
 export const TextBox = () => {
-    const initialQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    const initialQuote = localStorage.getItem('quote') || quotes[Math.floor(Math.random() * quotes.length)];
     const [quote, setQuote] = useState(initialQuote);
+
+    useEffect(() => {
+        const storedQuote = localStorage.getItem('quote');
+        if (storedQuote) {
+            setQuote(storedQuote);
+        } else {
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            setQuote(randomQuote);
+            localStorage.setItem('quote', randomQuote);
+        }
+    }, []);
 
     useEffect(() => {
         const intervalId = setInterval(() => {
             const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
             setQuote(randomQuote);
+            localStorage.setItem('quote', randomQuote);
         }, 1000 * 60 * 60 * 12);
 
         return () => clearInterval(intervalId);
     }, []);
 
     return (
-        <>
+        <div style={styles.container}>
             <p style={styles.quote}>{quote}</p>
-        </>
+        </div>
     );
 };
