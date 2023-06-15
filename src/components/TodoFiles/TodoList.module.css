@@ -1,12 +1,76 @@
-.list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.container {
+  margin: 20px;
+  padding: 20px;
+  border: none;
+  border-radius: 4px;
 }
 
-ul {
-  list-style: none;
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox input {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.list {
   padding: 0;
-  margin: 0;
+  list-style-type: none;
+  background: #ececec;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.image {
+  width: 100%;
+  height: 125px;
+  object-fit: contain;
+}
+
+.btn {
+  margin-left: 10px;
+  color: red;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  color: darkred;
+}
+
+/* Adicionar regra de mídia para dispositivos móveis */
+@media (max-width: 600px) {
+  .content {
+    grid-template-columns: 1fr; /* Alterar para uma coluna única */
+  }
+
+  .image {
+    height: auto; /* Permitir altura automática */
+  }
 }

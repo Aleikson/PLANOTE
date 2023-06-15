@@ -1,22 +1,27 @@
-html,
-body,
-#root {
-  height: 100%;
-  margin: 0;
-  background: lightblue;
+html{
+  background: #e7eaf6;
 }
 
 .App {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
 }
 
-.containerNote,
-.containerTodo {
-  flex: 1;
+.containerNote {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .boxText {
   height: 50%;
+}
+
+@media (max-width: 600px) {
+  .boxText {
+    height: 30%;
+  }
 }
