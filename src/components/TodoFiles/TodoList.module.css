@@ -64,13 +64,12 @@
   color: darkred;
 }
 
-/* Adicionar regra de mídia para dispositivos móveis */
 @media (max-width: 600px) {
   .content {
-    grid-template-columns: 1fr; /* Alterar para uma coluna única */
+    grid-template-columns: 1fr;
   }
 
   .image {
-    height: auto; /* Permitir altura automática */
+    height: auto;
   }
 }
