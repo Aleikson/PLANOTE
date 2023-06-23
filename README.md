@@ -16,7 +16,7 @@ This project is a productivity website that allows users to add notes and tasks 
 ## How to Run
 
 1. Make sure you have Node.js installed on your system.
-2. Clone this repository using the following command: git clone https://github.com/Aleikson/ExampleOfEcommerce.git
+2. Clone this repository using the following command: git clone https://github.com/Aleikson/PlanNote.git
 3. Navigate to the project directory:
 4. Install the project dependencies:
 5. Start the development server:
