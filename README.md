@@ -1,4 +1,4 @@
-# Cupcake Palace
+# Productivity Notes
 
 <p align="center">
   <img src="./TodoList.png" width="300" alt="TodoList">
