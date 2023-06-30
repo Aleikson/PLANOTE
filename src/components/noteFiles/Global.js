@@ -17,22 +17,22 @@ export const Global = () => {
       case 'ADD_NOTE':
         const newNote = {
           lastNoteCreatedAt: new Date().toTimeString().slice(0, 8),
-          totalNotes: prevState.notes.length + 1,
-          notes: [...prevState.notes, action.payload],
+          totalNotes: prevState.notes ? prevState.notes.length + 1 : 1,
+          notes: [...(prevState.notes || []), action.payload],
         };
         const newState = { ...prevState, ...newNote };
         localStorage.setItem('notesState', JSON.stringify(newState));
         return newState;
-
+  
       case 'DELETE_NOTE':
         const deleteNote = {
           ...prevState,
-          totalNotes: prevState.notes.length - 1,
-          notes: prevState.notes.filter((note) => note.id !== action.payload),
+          totalNotes: prevState.notes ? prevState.notes.length - 1 : 0,
+          notes: prevState.notes ? prevState.notes.filter((note) => note.id !== action.payload) : [],
         };
         localStorage.setItem('notesState', JSON.stringify(deleteNote));
         return deleteNote;
-
+  
       default:
         return prevState;
     }
