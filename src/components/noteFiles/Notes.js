@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import styles from "../noteFiles/Notes.module.css"
+import { useState, useEffect } from 'react';
+import styles from "../noteFiles/Notes.module.css";
 import { PaletteColor } from './PaletteColor';
 import { AiOutlineCloseSquare } from 'react-icons/ai';
 
@@ -10,13 +10,13 @@ export const Notes = ({ notes = [], deleteNote }) => {
 
   const handleNoteClick = (noteId) => {
     setSelectedNoteId(selectedNoteId === noteId ? null : noteId);
-  }
+  };
 
   const handleDeleteConfirmation = () => {
     deleteNote(selectedNoteId);
     setShowDeleteConfirmation(false);
     setSelectedNoteId(null);
-  }
+  };
 
   return (
     <div className={styles.noteContainer}>
@@ -24,9 +24,10 @@ export const Notes = ({ notes = [], deleteNote }) => {
         <Note
           key={note.id}
           note={note}
-          isSelected={selectedNoteId === note.id}
+          selectedNoteId={selectedNoteId}
           handleNoteClick={handleNoteClick}
           setShowDeleteConfirmation={setShowDeleteConfirmation}
+          deleteNote={deleteNote}
         />
       ))}
       {showDeleteConfirmation && (
@@ -40,17 +41,25 @@ export const Notes = ({ notes = [], deleteNote }) => {
   );
 };
 
-const Note = ({ note, isSelected, handleNoteClick, setShowDeleteConfirmation }) => {
+const Note = ({ note, selectedNoteId, handleNoteClick, setShowDeleteConfirmation, deleteNote }) => {
   const [noteBgColor, setNoteBgColor] = useState(note.bgColor || '#fcff82');
+
+  useEffect(() => {
+    const savedColor = localStorage.getItem(`noteColor-${note.id}`);
+    if (savedColor) {
+      setNoteBgColor(savedColor);
+    }
+  }, [note.id]);
 
   const handleNoteColorChange = (color) => {
     setNoteBgColor(color);
     note.bgColor = color;
+    localStorage.setItem(`noteColor-${note.id}`, color);
   };
 
   const handleDeleteNote = () => {
     setShowDeleteConfirmation(true);
-  }
+  };
 
   return (
     <div
@@ -68,7 +77,7 @@ const Note = ({ note, isSelected, handleNoteClick, setShowDeleteConfirmation }) 
       <button className={styles.deleteBtn} onClick={handleDeleteNote}>
         <AiOutlineCloseSquare />
       </button>
-      {isSelected && <PaletteColor onChange={handleNoteColorChange} />}
+      {selectedNoteId === note.id && <PaletteColor onChange={handleNoteColorChange} />}
     </div>
   );
 };
